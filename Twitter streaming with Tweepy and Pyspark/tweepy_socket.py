@@ -1,3 +1,4 @@
+# importing required libraries
 import tweepy
 from tweepy import OAuthHandler
 from tweepy import Stream
@@ -5,11 +6,13 @@ from tweepy.streaming import StreamListener
 import socket
 import json
 
+## Add your twitter auth credentials
 consumer_key = ''
 consumer_secret = ''
 access_token = ''
 access_secret = ''
 
+## Tweet streaming only taking text of from tweets ( There are many other information as latitude, longitude, twitter id etc.)
 class TweetsListener(StreamListener):
     def __init__(self, csocket):
         self.client_socket = csocket
@@ -27,7 +30,8 @@ class TweetsListener(StreamListener):
     def on_error(self, status):
         print(status)
         return True
-    
+
+## Making a twitter stream connection by filtering for tweets from Messi and Ronaldo		
 def sendData(c_socket):
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_secret)
@@ -35,6 +39,7 @@ def sendData(c_socket):
     twitter_stream = Stream(auth, TweetsListener(c_socket))
     return twitter_stream.filter(track=['Ronaldo','Messi'])
 
+## Main
 if __name__ == "__main__":
     s = socket.socket()         # Create a socket object
     host = "localhost"      # Get local machine name
