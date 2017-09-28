@@ -1,6 +1,6 @@
 # Object-Detector-App
 
-A real-time object recognition application using [Google's TensorFlow Object Detection API](https://github.com/tensorflow/models/tree/master/object_detection) and [OpenCV](http://opencv.org/).
+A real-time object recognition application using [Google's TensorFlow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection) and [OpenCV](http://opencv.org/).
 
 ## Getting Started
 Open object_detection_tutorial.ipynb notebook to run the code sequentially. Make sure you have all the requirements installed on your machine before running it.
