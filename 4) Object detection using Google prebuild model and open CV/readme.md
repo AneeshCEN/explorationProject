@@ -17,3 +17,6 @@ pytest -vs utils/
 
 ## Notes
 - OpenCV 3.1 might crash on OSX after a while, so that's why I had to switch to version 3.0. See open issue and solution [here](https://github.com/opencv/opencv/issues/5874).
+
+## Output
+![alt text](https://github.com/aayushmnit/explorationProject/blob/master/4\)%20Object%20detection%20using%20Google%20prebuild%20model%20and%20open%20CV/output.gif)
